@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
+import { OrderListComponent } from './components/order-list/order-list.component'; // Atualize o caminho
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatToolbarModule,
+    RouterModule,
+    OrderListComponent // Certifique-se de que isso está correto
+  ],
 })
 export class AppComponent {
-  title = 'fastfood2';
+  title = 'Fast Food System';
 }
